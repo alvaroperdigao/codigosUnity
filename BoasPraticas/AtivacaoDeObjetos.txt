@@ -1,0 +1,9 @@
+Para GameObject devo usar:
+
+GameObject.SetActive(true);
+GameObject.SetActive(false);
+
+Para Elementos de UI devo usar:
+
+Image.enable = true;
+Image.enable = false;
