@@ -3,6 +3,21 @@ Para GameObject devo usar:
 GameObject.SetActive(true);
 GameObject.SetActive(false);
 
+
+Deactivating a GameObject disables each component, including attached renderers, colliders, rigidbodies, and scripts. For example, Unity will no longer call the Update() method of a script attached to a deactivated GameObject. OnEnable or OnDisable are called as the GameObject received SetActive(true) or SetActive(false).
+
+void OnDisable()
+    {
+        Debug.Log("PrintOnDisable: script was disabled");
+    }
+
+    void OnEnable()
+    {
+        Debug.Log("PrintOnEnable: script was enabled");
+    }
+
+
+
 Para Elementos de UI devo usar:
 
 Image.enable = true;
