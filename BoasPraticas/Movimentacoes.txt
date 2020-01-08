@@ -1,0 +1,20 @@
+O objetivo desse documento é definir os melhores métodos de movimentação
+
+1 - Translate
+O Translate faz uma movimentação contante em uma direção vetorial
+
+        // Move the object forward along its z axis 1 unit/second.
+        transform.Translate(Vector3.forward * Time.deltaTime);
+
+
+
+2 - Position
+O Position seta de forma direta uma posição, em alguns casos pode ser usado para deslocamento através de incrementos sucessivos
+
+//get the Input from Horizontal axis
+float horizontalInput = Input.GetAxis("Horizontal");
+//get the Input from Vertical axis
+float verticalInput = Input.GetAxis("Vertical");
+
+//update the position
+transform.position = transform.position + new Vector3(horizontalInput * movementSpeed * Time.deltaTime, verticalInput * movementSpeed * Time.deltaTime, 0);
