@@ -32,7 +32,7 @@ public class controleMovimento : MonoBehaviour {
 
 	}
 	
-	//coloquei static aqui só por que essa funcao eh chamada por outro script
+	//coloquei static aqui só por que essa funcao eh chamada por outro script-
 	static public void movimenta2() {
 		anim.SetBool("move2", true);
 		anim.SetBool("move1", false);
