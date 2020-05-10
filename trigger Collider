@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class detectorCheckPoints : MonoBehaviour
+{
+
+    public GameObject botaoFoto;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        botaoFoto.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+
+    void OnTriggerEnter(Collider other) {
+
+        Debug.Log("Toquei em outro objeto: "+other.tag);
+        botaoFoto.SetActive(true);
+
+    }
+
+    void OnTriggerExit(Collider other) {
+
+        Debug.Log("Deixei de tocar o objeto:");
+        botaoFoto.SetActive(false);
+    }
+}
